@@ -29,7 +29,11 @@ As per [3.2.1.4 Install the free Oracle Instant Client ‘Basic’ ZIP file](htt
 >
 > Refer to the Oracle Instant Client documentation for details.
 
-Prepared library for [Oracle Instant Client Basic Light v18.5.0 for AWS Lambda Layer x86-64 for NodeJS runtime 14.x and 16.x](oracle-instantclient_18_5-lib.zip)
+Files `libmql1.so` and `libipc1.so` are required per AWS Lambda Layer error with code `DPI-1047`:
+
+> DPI-1047: Cannot locate a 64-bit Oracle Client library: "libmql1.so: cannot open shared object file: No such file or directory"
+and
+> DPI-1047: Cannot locate a 64-bit Oracle Client library: "libipc1.so: cannot open shared object file: No such file or directory"
 
 ### Related Links:
 
