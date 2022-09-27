@@ -1,5 +1,6 @@
-## Oracle DB 19 Instant Client Light for AWS Lambda Layer using NodeJS 14.x / 16.x
+# Oracle Instant Client Light for AWS Lambda Layer using NodeJS 14.x / 16.x
 
+## General Notes
 
 Use Node package module: [oracledb / node-oracledb, currently latest version 5.5](https://www.npmjs.com/package/oracledb/v/5.5.0)
 
@@ -11,12 +12,14 @@ Per node-oracledb install documentation, [2. Quick Start node-oracledb Installat
 
 > * Add Oracle Client libraries version 21, 19, 18, 12, or 11.2 to your operating system library search path such as `PATH` on Windows or `LD_LIBRARY_PATH` on Linux. On macOS link the libraries to `/usr/local/lib`.
 >   * If your database is remote, then get the libraries by downloading and unzipping the free [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) “Basic” or “Basic Light” package for your operating system architecture.
->   * Instant Client on Windows requires an appropriate Visual Studio Redistributable. On Linux, the libaio (sometimes called libaio1) package is needed. When using Instant Client 19 on recent Linux versions, such as Oracle Linux 8, you may also need to install the libnsl package. This is not needed from Instant Client 21 onward.
+>   * Instant Client on Windows requires an appropriate Visual Studio Redistributable. On Linux, the `libaio` (sometimes called `libaio1`) package is needed. When using Instant Client 19 on recent Linux versions, such as Oracle Linux 8, you may also need to install the `libnsl` package. This is not needed from Instant Client 21 onward.
 >   * \[...\]
 >
 > Oracle Client libraries 21 can connect to Oracle Database 12.1 or greater. Oracle Client libraries 19, 18 and 12.2 can connect to Oracle Database 11.2 or greater. Version 12.1 client libraries can connect to Oracle Database 10.2 or greater. Version 11.2 client libraries can connect to Oracle Database 9.2 or greater.
 
-## Reducing file size further for Oracle DB 19
+Note: equivalent `libaio` file for which can be used in AWS Lambda Layer and in this [oracle-instantclient_18_5-lib.zip]() is named `libaio.so.1`, and was obtained from within [lambda-lib.zip](https://github.com/juliangsp/node-oracledb-for-lambda/blob/master/lambda-lib.zip)
+
+### Reducing file size further
 
 As per [3.2.1.4 Install the free Oracle Instant Client ‘Basic’ ZIP file](https://oracle.github.io/node-oracledb/INSTALL.html#3214-install-the-free-oracle-instant-client-basic-zip-file):
 
