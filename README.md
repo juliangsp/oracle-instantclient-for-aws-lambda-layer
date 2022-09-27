@@ -22,9 +22,11 @@ As per [3.2.1.4 Install the free Oracle Instant Client ‘Basic’ ZIP file](htt
 
 > If disk space is important, most users will be able to use the smaller Basic Light package instead of the Basic package. Review its globalization limitations. Disk space can be reduced by removing unnecessary libraries and files from either the Basic or Basic Light packages. The exact libraries depend on the Instant Client version. For example, with Oracle Instant Client 19, you can optionally remove files using:
 > 
-> rm -i *jdbc* *occi* *mysql* *mql1* *ipc1* *jar uidrvci genezi adrci
+> `rm *jdbc* *occi* *mysql* *mql1* *ipc1* *jar uidrvci genezi adrci`
 >
 > Refer to the Oracle Instant Client documentation for details.
+
+Prepared library for [Oracle Instant Client Basic Light v18.5.0 for AWS Lambda Layer x86-64 for NodeJS runtime 14.x and 16.x](oracle-instantclient_18_5-lib.zip)
 
 ### Related Links:
 
